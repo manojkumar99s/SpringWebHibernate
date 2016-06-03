@@ -1,10 +1,11 @@
 package com.websystique.springmvc.dao;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 import org.dbunit.dataset.IDataSet;
 import org.dbunit.dataset.xml.FlatXmlDataSet;
-import org.joda.time.LocalDate;
+//import org.joda.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -76,7 +77,7 @@ public class EmployeeDaoImplTest extends EntityDaoImplTest{
 		employee.setName("Karen");
 		employee.setSsn("12345");
 		employee.setSalary(new BigDecimal(10980));
-		employee.setJoiningDate(new LocalDate());
+		employee.setJoiningDate(new Date());
 		return employee;
 	}
 

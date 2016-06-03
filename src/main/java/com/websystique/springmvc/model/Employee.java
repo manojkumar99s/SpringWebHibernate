@@ -1,6 +1,7 @@
 package com.websystique.springmvc.model;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -32,8 +33,8 @@ public class Employee {
 	@NotNull
 	@DateTimeFormat(pattern="dd/MM/yyyy") 
 	@Column(name = "JOINING_DATE", nullable = false)
-	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
-	private LocalDate joiningDate;
+	//@Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
+	private Date joiningDate;
 
 	@NotNull
 	@Digits(integer=8, fraction=2)
@@ -60,11 +61,11 @@ public class Employee {
 		this.name = name;
 	}
 
-	public LocalDate getJoiningDate() {
+	public Date getJoiningDate() {
 		return joiningDate;
 	}
 
-	public void setJoiningDate(LocalDate joiningDate) {
+	public void setJoiningDate(Date joiningDate) {
 		this.joiningDate = joiningDate;
 	}
 

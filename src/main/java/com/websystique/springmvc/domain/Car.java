@@ -1,5 +1,6 @@
 package com.websystique.springmvc.domain;
 
+
 public class Car {
 
     private String VIN;
